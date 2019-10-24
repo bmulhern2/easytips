@@ -1,11 +1,13 @@
-let button = document.querySelector('#submit')
-	button.addEventListener('click', calculate);
+/* let button = document.querySelector('#submit')
+	button.addEventListener('click', calculate); */
 
-	function calculate(cost, tipPercent, total) {
-	cost = document.querySelector('#number');
-	cost = parseInt(cost.value);
+	/* function calculate(prompt, cost, tipPercent, total) { */
+	var prompt2 = prompt("How Much Did Your Meal Cost?");
+	prompt = parseInt(prompt2);
 	var tipAmount = 0.15;
-	total  = (cost * tipAmount) + cost; 
+	var total  = (prompt * tipAmount) + prompt;
 	var output = document.querySelector('.output')
-	output.innerHTML = 'Total: $' +  total.toFixed(2);
-};
+	output.innerHTML = 'Total: $' + total;
+	output.style.marginTop = "100px";
+
+/* }; */
