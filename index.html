@@ -80,6 +80,7 @@
 	background:lightgray;
 }
     </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/mathjs@6.2.3/dist/math.min.js"></script>
     </head>
     <body>
@@ -94,6 +95,19 @@
 	<button><a href="privacypolicy.html">Privacy Policy</a></button>
 	<button><a href="termsofservice.html">Terms of Service</a></button>
     </footer>
-    </body>
-    <script src="main.js"></script>
+    <script>
+    let button = ('#submit');
+    	$('button').on('click', calculate);
+
+    	function calculate() {
+    var input = prompt("How Much Was Your Meal?");
+    var input2 = input;
+    var tipAmount = 1.15;
+    var total = (input * tipAmount).toFixed(2);
+    var output = document.querySelector('.output');
+    	output.innerHTML = 'Total: $' + total;
+    	output.style.marginTop = "100px";
+    };
+</script>
+</body>
 </html>
